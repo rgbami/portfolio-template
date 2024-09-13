@@ -1,0 +1,17 @@
+.computer {
+    display: none;
+}
+
+.mobile {
+    display: block;
+}
+
+fieldset {
+    margin: 0.5em;
+}
+
+.flex-container {
+    display: flex;
+    margin-left: 0em;
+    margin-right: 2em;
+}

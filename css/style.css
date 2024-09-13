@@ -1,0 +1,297 @@
+* {
+    color: aliceblue;
+    line-height: 2.7rem;
+}
+
+body {
+    background-color: #141414;
+    font-size: 2em;
+    font-family: Inter,ui-sans-serif,system-ui; 
+}
+
+.container {  
+    display: grid;
+    grid-template-columns: 0.2fr 2.6fr;
+    grid-template-rows: 0.5fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "sm navbar"
+        "logo content"
+        "blank footer";
+}
+
+.footer { 
+    grid-area: footer; 
+    font-family: "Handlee", cursive;
+}
+
+.logo { 
+    grid-area: logo; 
+    margin: 10px;
+    background: linear-gradient(#fb7c7c, #188afd);
+}
+
+.logo p {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    text-align: center;
+    padding: 20px;
+    font-family: "Caveat", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4em;
+}
+
+.logo img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.navbar { 
+    grid-area: navbar; 
+    margin: 50px;
+}
+
+.sm { 
+    grid-area: sm; 
+    margin: 10px;
+    background: linear-gradient(#f6b574, #f877b8);
+}
+
+.sm img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.blank { 
+    grid-area: blank; 
+    margin: 10px;
+    background: linear-gradient(#1886f5, #45f4ba);
+}
+
+.blank img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.blank p {
+    writing-mode: vertical-rl; 
+    /* Right-to-left block flow direction, first line on the right */
+    transform: rotate(180deg);
+    text-align: center;
+    padding: 10px;
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1em;
+}
+
+.content { 
+    grid-area: content; 
+    margin: 50px; 
+}
+
+html, body, .container {
+    height: 100%;
+    margin: 0;
+}
+
+button {
+    border: none;
+    font-size: 0.5em;
+    background-color: transparent;
+    font-family: "Aldrich", sans-serif;
+}
+
+.icon img, a img {
+    width: 38px;
+    padding-top: 20px;
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 20px;
+    text-decoration: none;
+    height: 100%;
+    color: #ffffffa6;
+}
+
+nav a:hover {
+    color: white;
+}
+
+li {
+    position: relative;
+    color:#ffffffa6;
+}
+
+footer {
+    text-align: right;
+    background: transparent;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    padding-right: 10px;
+}
+
+nav {
+    margin: auto;
+    display: block;
+    flex-direction: row;
+    font-size: 0.5em;
+    float: right;
+}
+
+nav a {
+    float: left;
+    display: block;
+    text-align: left;
+}
+
+header, section {
+    font-size: 1em;
+    text-align: left;
+}
+
+h1 {
+    font-size: 1em;
+    font-style: normal;
+}
+
+h2, h3, h4, h5, h6 {
+    font-size: 1.5em;
+    font-weight: 800;
+}
+
+p {
+    font-size: 0.5em;
+    color: #ffffffa6;
+    white-space: normal;
+}
+
+h3 {
+    color: #ffffffa6;
+    font-size: 0.7em;
+}
+
+ul {
+    font-size: 0.5em;
+    list-style-type: '- ';
+    font-weight: lighter;
+    white-space: normal;
+}
+
+.contact > a {
+    color: #ffffffa6;
+    font-size: 0.5em;
+    text-decoration: none;
+    display: inline-block;
+}
+
+article {
+    margin: 50px; 
+    background: #33333341;
+    padding: 15px;
+    white-space: nowrap;
+}
+
+footer {
+    padding-right: 50px;
+    position: relative;
+    float:right;
+    bottom:0;
+    right:0;
+}
+
+figcaption {
+    font-size: 0.4em;
+}
+
+/* timeline code */    
+/* Outer Layer with the timeline border */
+.outer {
+    border-left: 2px solid white;
+}
+
+.card {
+    position: relative;
+    margin: 0 0 0px 20px;
+    padding: 10px;
+    background: #33333341;
+    color: lightgrey;
+}
+
+/* Title of the card */
+h4 {
+    position: relative;
+    font-size: 0.5em;
+}
+
+/* Timeline dot  */
+.title::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 999px;
+    left: -39px;
+    border: 3px solid #3399ff;
+}
+
+
+/* rainbow rays */
+@keyframes jumbo {
+    from {
+        background-position: 50% 50%, 50% 50%;
+    }
+    to {
+        background-position: 350% 50%, 350% 50%;
+    }
+}
+
+.wrapper {
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    --stripesDark: repeating-linear-gradient(
+        100deg,
+        black 0%,
+        transparent 20%
+    );
+    --rainbow: repeating-linear-gradient(
+        100deg, 
+        #ffcc99 10%,
+        #ff99cc 20%,
+        #66ffcc 40%,
+        #66a5e3 50%,
+        #0a56a2 60%
+    );
+    mask: radial-gradient(ellipse at 80%, #a8ddf0eb 0%, transparent 100%);
+    --rainbow: repeating-linear-gradient( 100deg, #ffb399 30%, #ff99cc 60%, #3399ff 90%, #66ffcc 80%, #66a5e3 10% );
+}
+
+.wrapper::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: var(--stripes), var(--rainbow);
+    background-size: 200%, 100%;
+    animation: jumbo 60s linear infinite;
+    mix-blend-mode: color-dodge;
+    background-image: var(--stripesDark), var(--rainbow);
+}
+
+.wrapper {
+    background-image: var(--stripesDark), var(--rainbow);
+    filter: blur(100px) opacity(50%) saturate(300%);
+}
